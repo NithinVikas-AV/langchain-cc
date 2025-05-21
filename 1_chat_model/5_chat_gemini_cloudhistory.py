@@ -4,24 +4,14 @@ from langchain_google_firestore import FirestoreChatMessageHistory
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
-"""
-Setup Instructions (same as original):
-1. Create Firebase project
-2. Enable Firestore
-3. Install & authenticate Google Cloud CLI
-4. Enable Firestore API
-5. Install required packages:
-   pip install langchain-google-genai langchain-google-firestore google-cloud-firestore python-dotenv
-"""
-
 # Load environment variables
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 
 # Firebase Firestore setup
-PROJECT_ID = "<project_id>"  # Replace with your actual project ID
-SESSION_ID = "<session_id>"
-COLLECTION_NAME = "<collection_name>"
+PROJECT_ID = "langchain-cc"  # Replace with your actual project ID
+SESSION_ID = "user1_session"
+COLLECTION_NAME = "chat_history"
 
 # Initialize Firestore Client
 print("Initializing Firestore Client...")
